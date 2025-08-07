@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login to AllegiantVETS</title>
+  <title>Login - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Login</h1>
+    <h1>Member Login</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,15 +17,29 @@
       <a href="faq.html">FAQ</a>
       <a href="events.html">Events</a>
       <a href="survey.html">Survey</a>
-      <a href="login.html">Login</a>
+      <a href="login.html" class="active">Login</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Secure Access</h2>
-      <p>Please log in with your email and passkey to access your dashboard.</p>
+    <section class="hero">
+      <h2>Welcome Back!</h2>
+      <p>Log in with your email and passcode to access your dashboard and resources.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="login-form" action="/dashboard.html" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="passkey">Passkey</label>
+        <input type="password" id="passkey" name="passkey" required />
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <p style="text-align:center; margin-top:1rem;">Need help? <a href="mailto:info@allegiantvets.org">Contact support</a></p>
     </section>
   </main>
 

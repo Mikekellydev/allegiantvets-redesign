@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact AllegiantVETS</title>
+  <title>Contact Us - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <h1>Contact AllegiantVETS</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -18,14 +18,38 @@
       <a href="events.html">Events</a>
       <a href="survey.html">Survey</a>
       <a href="login.html">Login</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Reach Out</h2>
-      <p>Have questions or want to collaborate? Drop us a message.</p>
+    <section class="hero">
+      <h2>We’d Love to Hear From You</h2>
+      <p>Whether you’re a member, partner, or just exploring — reach out anytime. We’re here to help.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="contact-form" action="mailto:info@allegiantvets.org" method="POST" enctype="text/plain">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-directory" style="margin-top: 2rem;">
+        <h3>Organization Directory</h3>
+        <ul>
+          <li><strong>Support Email:</strong> <a href="mailto:info@allegiantvets.org">info@allegiantvets.org</a></li>
+          <li><strong>Discord:</strong> <a href="https://discord.com/invite/allegiantvets" target="_blank">Join Server</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/company/allegiantvets" target="_blank">@allegiantvets</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 

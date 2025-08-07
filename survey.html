@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AllegiantVETS Survey</title>
+  <title>Weekly Survey - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,16 +16,41 @@
       <a href="resources.html">Resources</a>
       <a href="faq.html">FAQ</a>
       <a href="events.html">Events</a>
-      <a href="survey.html">Survey</a>
+      <a href="survey.html" class="active">Survey</a>
       <a href="login.html">Login</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="card">
-      <h2>Stay On Track</h2>
-      <p>Submit your weekly goals, hours, and partner check-ins.</p>
+    <section class="hero">
+      <h2>Your Weekly Check-In</h2>
+      <p>This form helps us support your goals and track progress throughout your SkillBridge or OJT journey.</p>
+    </section>
+
+    <section class="form-section">
+      <form id="survey-form">
+        <label for="code">Weekly Code Word</label>
+        <input type="text" id="code" name="code" required />
+
+        <label for="hours">Hours Worked This Week</label>
+        <input type="number" id="hours" name="hours" min="0" required />
+
+        <label for="goal">Weekly Goal</label>
+        <textarea id="goal" name="goal" rows="2" required></textarea>
+
+        <label for="partner">Accountability Partner Connection?</label>
+        <select id="partner" name="partner" required>
+          <option value="">Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="comments">Additional Comments (Optional)</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+
+        <button type="submit" class="btn">Submit Survey</button>
+      </form>
     </section>
   </main>
 
