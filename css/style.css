@@ -1,51 +1,137 @@
-/* Navbar Container */
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+  padding: 0;
+}
+
+/* Header + Navbar */
+header {
+  background-color: #001f3f;
+  color: white;
+  padding: 1rem;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--nav-bg, #003366);
-  padding: 0.75rem 1rem;
-  color: white;
-  flex-wrap: wrap;
 }
 
-/* Logo Link */
 .nav-logo a {
   color: white;
   text-decoration: none;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.25rem;
 }
 
-/* Hamburger Button */
 .hamburger {
-  display: none;
-  font-size: 1.5rem;
   background: none;
   border: none;
   color: white;
+  font-size: 1.5rem;
   cursor: pointer;
+  display: none;
 }
 
-/* Nav Links */
 #nav-links {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 #nav-links a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem;
 }
 
-#nav-links a:hover {
-  background-color: #005999;
+main {
+  padding: 2rem;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1599981307140-1218fdbbbb1a?fit=crop&w=1050&q=80') center/cover no-repeat;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Cards */
+.features {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA */
+.cta {
+  margin-top: 3rem;
+  text-align: center;
+  background: #004080;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: white;
+  color: #004080;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
   border-radius: 4px;
 }
 
-/* Mobile Styles */
+/* Footer */
+footer {
+  background: #001f3f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #61dafb;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -54,17 +140,19 @@
   #nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-
-  #nav-links.open {
-    display: flex;
+    background: #001f3f;
+    padding: 1rem;
   }
 
   #nav-links a {
-    padding: 0.75rem;
-    background: #003366;
-    border-top: 1px solid #005999;
+    padding: 0.5rem 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .features {
+    flex-direction: column;
   }
 }
