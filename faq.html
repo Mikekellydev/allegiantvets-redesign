@@ -19,7 +19,21 @@
       <a href="survey.html">Survey</a>
       <a href="login.html">Login</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </nav><div id="main-nav"></div>
+<script>
+  fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('main-nav').innerHTML = data;
+    })
+    .then(() => {
+      // Attach toggle function AFTER nav is loaded
+      window.toggleMenu = function () {
+        const nav = document.getElementById("nav-links");
+        nav.classList.toggle("open");
+      };
+    });
+</script>
   </header>
 
   <main>

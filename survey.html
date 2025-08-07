@@ -9,17 +9,21 @@
 <body>
   <header>
     <h1>Weekly Accountability Survey</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="community.html">Community</a>
-      <a href="resources.html">Resources</a>
-      <a href="faq.html">FAQ</a>
-      <a href="events.html">Events</a>
-      <a href="survey.html" class="active">Survey</a>
-      <a href="login.html">Login</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<div id="main-nav"></div>
+<script>
+  fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('main-nav').innerHTML = data;
+    })
+    .then(() => {
+      // Attach toggle function AFTER nav is loaded
+      window.toggleMenu = function () {
+        const nav = document.getElementById("nav-links");
+        nav.classList.toggle("open");
+      };
+    });
+</script>
   </header>
 
   <main>
