@@ -387,3 +387,80 @@ footer a {
     padding: 10px;
   }
 }
+
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.not-found .btn {
+  background-color: #e30613;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.not-found .btn:hover {
+  background-color: #ba0510;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contact-form .btn {
+  margin-top: 1.5rem;
+  background-color: #e30613;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background-color: #ba0510;
+}

@@ -2,132 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>How to Join | AllegiantVETS</title>
-  <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join AllegiantVETS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>AllegiantVETS</h1>
-   <div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
 
-  <main>
-    <section>
-      <h2>Join AllegiantVETS</h2>
-      <p>
-        Getting started with AllegiantVETS is easy. Whether you're a transitioning service member, veteran, or military spouse, we have the resources and support ready for you.
-      </p>
+  <!-- Load Navbar -->
+  <div id="navbar-container"></div>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Join AllegiantVETS</h1>
     </section>
 
-    <section>
-      <h3>Steps to Get Started</h3>
-      <ol>
-        <li><strong>Apply to SkillBridge:</strong> Complete the intake form to begin your onboarding process.</li>
-        <li><strong>Join Our Discord:</strong> After applying, you’ll receive an invite to our private Discord server where you can connect with staff, mentors, and peers.</li>
-        <li><strong>Attend Orientation:</strong> Learn how the program works and get set up for success.</li>
-        <li><strong>Submit Your Weekly Surveys:</strong> Stay accountable and track your progress toward transition goals.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h3>New Here?</h3>
+    <section class="page-content">
       <p>
-        Start by visiting our FAQ page or reaching out through our contact form if you have questions before applying.
+        AllegiantVETS is a nonprofit helping transitioning service members, veterans, and military spouses launch successful careers in IT, cybersecurity, and technology.
       </p>
-      <div>
-        <a href="faq.html"><strong>View FAQs</strong></a> | 
-        <a href="contact.html"><strong>Contact Us</strong></a>
-      </div>
-    </section>
 
-    <section>
-      <h3>Ready to Apply?</h3>
       <p>
-        Click the button below to begin your transition journey.
+        Through career mentorship, weekly accountability, certification planning, and a nationwide network of supporters, we walk alongside you — from the moment you start transition to your first civilian job and beyond.
       </p>
-      <a href="https://www.allegiantvets.org/apply" target="_blank"><strong>Apply Now →</strong></a>
+
+      <h3>Who Can Join?</h3>
+      <ul>
+        <li>Active-duty service members in SkillBridge or transition</li>
+        <li>Veterans and reservists</li>
+        <li>Military spouses and civilian allies committed to support</li>
+      </ul>
+
+      <h3>What You’ll Get</h3>
+      <ul>
+        <li>Mentorship from veterans in tech</li>
+        <li>Career certification planning and job-hunting support</li>
+        <li>A supportive, accountability-driven community</li>
+        <li>Access to Discord and weekly check-ins</li>
+      </ul>
+
+      <p><strong>Step 1:</strong> Join our Discord to get started!</p>
+      <a href="https://discord.com/invite/allegiantvets" target="_blank" class="btn">Join Us on Discord</a>
     </section>
   </main>
 
-    <section class="extended-footer">
-  <div class="footer-grid">
+  <!-- Extended Footer -->
+  <section class="extended-footer">
+    <div class="footer-grid">
 
-    <!-- Powered By Logo -->
-    <div class="footer-column">
-      <p style="color: red; font-style: italic;">Powered By</p>
-      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      <div class="footer-column">
+        <p style="color: red; font-style: italic;">Powered By</p>
+        <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      </div>
+
+      <div class="footer-column">
+        <h3>CONNECT</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login / Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p><strong>Address:</strong><br>
+        4465 Granite Drive<br>
+        Suite 700<br>
+        Rocklin, CA 95677</p>
+        <p><strong>Phone:</strong><br>(916) 543-1311</p>
+        <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Connect -->
-    <div class="footer-column">
-      <h3>CONNECT</h3>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Discord</a></li>
-      </ul>
-    </div>
-
-    <!-- About -->
-    <div class="footer-column">
-      <h3>ABOUT</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login / Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-column">
-      <h3>CONTACT</h3>
-      <p><strong>Address:</strong><br>
-      4465 Granite Drive<br>
-      Suite 700<br>
-      Rocklin, CA 95677</p>
-      <p><strong>Phone:</strong><br>(916) 543-1311</p>
-      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
-    </div>
-
-  </div>
-</section>
-
+  <!-- Final Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank" style="color: white;">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
-      <a href="https://www.linkedin.com/company/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">LinkedIn</a>
-      <a href="https://twitter.com/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">Twitter (X)</a>
-      <a href="https://discord.com/invite/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank" style="color:white; margin: 0 10px;">Email</a>
-    </div>
+    <p>
+      &copy; 2025 AllegiantVETS by 
+      <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a> | 
+      <strong class="irs-id">IRS 501(c)(3) #27-4856683</strong>
+    </p>
   </footer>
+
+  <!-- JS: Load navbar -->
   <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

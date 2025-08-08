@@ -2,125 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - AllegiantVETS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="assets/logos/AllegiantVets Logo.jpeg" alt="AllegiantVETS Logo" height="40">
-      </a>
-    </div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="community.html">Community</a>
-      <div class="submenu">
-        <button class="submenu-toggle">Tools & Support ▾</button>
-        <div class="submenu-content">
-          <a href="resources.html">Resources</a>
-          <a href="survey.html">Survey</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <a href="faq.html">FAQ</a>
-      <a href="events.html">Events</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Who We Are</h1>
-    <p>Empowering section class="page-header">
-  <div class="container">
-    <h1>About Us</h1>
-  </div>S
-</section>today's heroes to become tomorrow’s leaders.</p>
-  </section>
+  <!-- Load Navbar -->
+  <div id="navbar-container"></div>
 
-  <!-- About Content -->
   <main class="container">
-    <section class="card about-card">
-      <h2>Our Mission</h2>
-      <p>AllegiantVETS is a nonprofit dedicated to helping veterans and transitioning service members bridge the gap to the civilian workforce through mentorship, certification, and a vibrant community.</p>
+    <section class="page-header">
+      <h1>About AllegiantVETS</h1>
     </section>
 
-    <section class="card about-card">
-      <h2>Our Story</h2>
-      <p>Founded by veterans, for veterans, AllegiantVETS began with the desire to create real, actionable paths for those who served. We've grown into a nationwide community with impact in IT, cloud, and cybersecurity careers.</p>
-    </section>
-
-    <section class="card about-card">
-      <h2>Meet Our Team</h2>
-      <p>Our leadership team includes former military professionals, career advisors, and IT experts who understand the unique journey of military transition. They are committed to seeing you succeed beyond the uniform.</p>
+    <section class="page-content">
+      <p>
+        AllegiantVETS is a veteran-led nonprofit committed to helping transitioning service members and veterans discover fulfilling careers in tech, cybersecurity, and IT through mentorship, community accountability, and industry-recognized certification programs.
+      </p>
+      <p>
+        Our mission is to walk alongside each veteran, empowering them with real-world skills, professional development, and the support they need to thrive during and after military transition.
+      </p>
+      <p>
+        With a growing national community and strategic partners in the public and private sectors, we connect people to purpose — and potential.
+      </p>
     </section>
   </main>
 
+  <!-- Extended Footer -->
   <section class="extended-footer">
-  <div class="footer-grid">
+    <div class="footer-grid">
 
-    <!-- Powered By Logo -->
-    <div class="footer-column">
-      <p style="color: red; font-style: italic;">Powered By</p>
-      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      <div class="footer-column">
+        <p style="color: red; font-style: italic;">Powered By</p>
+        <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      </div>
+
+      <div class="footer-column">
+        <h3>CONNECT</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login / Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p><strong>Address:</strong><br>
+        4465 Granite Drive<br>
+        Suite 700<br>
+        Rocklin, CA 95677</p>
+        <p><strong>Phone:</strong><br>(916) 543-1311</p>
+        <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Connect -->
-    <div class="footer-column">
-      <h3>CONNECT</h3>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Discord</a></li>
-      </ul>
-    </div>
-
-    <!-- About -->
-    <div class="footer-column">
-      <h3>ABOUT</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login / Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-column">
-      <h3>CONTACT</h3>
-      <p><strong>Address:</strong><br>
-      4465 Granite Drive<br>
-      Suite 700<br>
-      Rocklin, CA 95677</p>
-      <p><strong>Phone:</strong><br>(916) 543-1311</p>
-      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Footer -->
+  <!-- Final Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
-      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
-      <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org">Email</a>
-    </div>
+    <p>
+      &copy; 2025 AllegiantVETS by 
+      <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a> | 
+      <strong class="irs-id">IRS 501(c)(3) #27-4856683</strong>
+    </p>
   </footer>
+
+  <!-- JS: Load navbar -->
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

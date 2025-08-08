@@ -2,147 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>What We Do | AllegiantVETS</title>
-  <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do - AllegiantVETS</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .what-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
 
+    .what-section h2 {
+      margin-top: 2rem;
+    }
+
+    .what-section ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .what-section ul li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>AllegiantVETS</h1>
-    <div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
 
-  <main>
+  <!-- Load Navbar -->
+  <div id="navbar-container"></div>
+
+  <main class="container">
     <section class="page-header">
-  <div class="container">
-    <h1>What We Do</h1>
-  </div>
-</section>
-    <section>
-      <h2>What We Do</h2>
-      <p>
-        AllegiantVETS provides a holistic, personalized, and mission-ready approach to military transition. From SkillBridge placements to mentorship and upskilling, our team ensures that each service member receives the resources and support they need to thrive in the civilian workforce.
-      </p>
+      <h1>What We Do</h1>
     </section>
 
-    <section>
-      <h3>Guided Career Transition</h3>
-      <p>
-        Whether you're weeks away from separation or just beginning to plan, our process supports you from first connection to final employment:
-      </p>
+    <section class="what-section">
+      <p>AllegiantVETS exists to empower veterans, transitioning service members, and military spouses to succeed in the civilian workforce — especially in IT, cybersecurity, and cloud computing.</p>
+
+      <h2>Our Mission</h2>
+      <p>We serve as a bridge between military experience and thriving tech careers by offering mentorship, accountability, and training support in a unified community.</p>
+
+      <h2>How We Help</h2>
       <ul>
-        <li>1-on-1 coaching and weekly accountability</li>
-        <li>Customized SkillBridge pathways</li>
-        <li>VA benefit education and career mapping</li>
-        <li>Access to exclusive partners and career tools</li>
+        <li>🏁 **Onboarding Support** — Learn how to navigate SkillBridge, job searching, and professional networking.</li>
+        <li>🎯 **Weekly Accountability** — Stay on track with goal setting, progress reporting, and partner check-ins.</li>
+        <li>🎓 **Training + Certifications** — Access top-tier IT certification courses through our Coursera and partner platforms.</li>
+        <li>🤝 **Mentorship & Peer Support** — Get advice from veterans who have successfully transitioned into civilian careers.</li>
+        <li>📁 **Job Search Help** — Improve your resume, LinkedIn, and interview skills with feedback and job leads.</li>
+        <li>🌐 **Community Access** — Join our Discord and live sessions to connect, collaborate, and grow.</li>
       </ul>
-    </section>
-
-    <section>
-      <h3>SkillBridge Success Support</h3>
-      <p>
-        As a DoD-approved SkillBridge provider, AllegiantVETS connects active duty members with training and real-world job experience before they separate. We guide you through every step of the application, placement, and transition.
-      </p>
-    </section>
-
-    <section>
-      <h3>Opportunity Creation</h3>
-      <p>
-        Through strategic industry partnerships, we open doors to high-impact, high-opportunity careers in fields such as IT, government contracting, logistics, and professional services. Our network helps you go from MOS to meaningful career with intention.
-      </p>
-    </section>
-
-    <section>
-      <h3>Support Beyond Separation</h3>
-      <p>
-        Our community doesn’t stop after you get the job. We offer long-term connection, mentorship, and alumni support so you can continue building your legacy with other mission-minded professionals.
-      </p>
-    </section>
-
-    <section>
-      <h3>Ready to Get Started?</h3>
-      <a href="join.html"><strong>Create Your Roadmap →</strong></a>
     </section>
   </main>
 
-    <section class="extended-footer">
-  <div class="footer-grid">
+  <!-- Extended Footer -->
+  <section class="extended-footer">
+    <div class="footer-grid">
 
-    <!-- Powered By Logo -->
-    <div class="footer-column">
-      <p style="color: red; font-style: italic;">Powered By</p>
-      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      <div class="footer-column">
+        <p style="color: red; font-style: italic;">Powered By</p>
+        <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      </div>
+
+      <div class="footer-column">
+        <h3>CONNECT</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login / Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p><strong>Address:</strong><br>
+        4465 Granite Drive<br>
+        Suite 700<br>
+        Rocklin, CA 95677</p>
+        <p><strong>Phone:</strong><br>(916) 543-1311</p>
+        <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Connect -->
-    <div class="footer-column">
-      <h3>CONNECT</h3>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Discord</a></li>
-      </ul>
-    </div>
-
-    <!-- About -->
-    <div class="footer-column">
-      <h3>ABOUT</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login / Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-column">
-      <h3>CONTACT</h3>
-      <p><strong>Address:</strong><br>
-      4465 Granite Drive<br>
-      Suite 700<br>
-      Rocklin, CA 95677</p>
-      <p><strong>Phone:</strong><br>(916) 543-1311</p>
-      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
-    </div>
-
-  </div>
-</section>
-
+  <!-- Final Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank" style="color: white;">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
-      <a href="https://www.linkedin.com/company/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">LinkedIn</a>
-      <a href="https://twitter.com/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">Twitter (X)</a>
-      <a href="https://discord.com/invite/allegiantvets" target="_blank" style="color:white; margin: 0 10px;">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank" style="color:white; margin: 0 10px;">Email</a>
-    </div>
+    <p>
+      &copy; 2025 AllegiantVETS by 
+      <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a> | 
+      <strong class="irs-id">IRS 501(c)(3) #27-4856683</strong>
+    </p>
   </footer>
+
+  <!-- JS: Load navbar -->
   <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

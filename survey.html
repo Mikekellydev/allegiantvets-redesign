@@ -2,131 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accountability Survey - AllegiantVETS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Survey - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
+  <style>
+    .survey-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #f4f8fc;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .survey-form label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .survey-form input,
+    .survey-form textarea,
+    .survey-form select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.3rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .survey-form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #004477;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .survey-form button:hover {
+      background-color: #003355;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="AllegiantVets Logo.jpeg" alt="AllegiantVETS Logo" height="40">
-      </a>
-    </div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <nav id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="community.html">Community</a>
-      <div class="submenu">
-        <button class="submenu-toggle">Tools & Support ▾</button>
-        <div class="submenu-content">
-          <a href="resources.html">Resources</a>
-          <a href="survey.html" class="active">Survey</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <a href="faq.html">FAQ</a>
-      <a href="events.html">Events</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </div>
 
-  <!-- Hero -->
-  <section class="page-header">
-  <div class="container">
-    <h1>Weekly Accountability Survey</h1>
-  </div>
-</section>
+  <!-- Load Navbar -->
+  <div id="navbar-container"></div>
 
-  <!-- Survey Form -->
   <main class="container">
-    <section class="card">
-      <form>
-        <label for="code">Weekly Code</label>
-        <input type="text" id="code" name="code" placeholder="Enter your weekly code" required>
+    <section class="page-header">
+      <h1>Weekly Accountability Survey</h1>
+    </section>
 
-        <label for="attendance">Attendance (Connections & Sessions)</label>
-        <input type="text" id="attendance" name="attendance" placeholder="List events you attended">
+    <section class="page-content">
+      <p>Please fill out your weekly accountability survey. Your honesty helps us support your growth and keep you on track.</p>
 
-        <label for="goal">Weekly Goal</label>
-        <input type="text" id="goal" name="goal" placeholder="What was your weekly goal?">
+      <form class="survey-form" action="#" method="post">
+        <label for="weeklyCode">Weekly Code</label>
+        <input type="text" id="weeklyCode" name="weeklyCode" required>
 
-        <label for="partner">Partner Connection</label>
-        <input type="text" id="partner" name="partner" placeholder="Who did you connect with?">
+        <label for="attendance">Attendance (Did you show up?)</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
 
-        <label for="hours">Total Hours Logged</label>
-        <input type="number" id="hours" name="hours" min="0" placeholder="e.g., 12">
+        <label for="goal">What was your goal this week?</label>
+        <input type="text" id="goal" name="goal" required>
 
-        <label for="comments">Comments / Notes</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Share updates, blockers, or feedback"></textarea>
+        <label for="progress">Progress Made</label>
+        <textarea id="progress" name="progress" rows="4" required></textarea>
 
-        <button type="submit" class="btn-primary">Submit Survey</button>
+        <label for="partner">Accountability Partner Contacted?</label>
+        <select id="partner" name="partner" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="hours">Hours Worked Toward Goal</label>
+        <input type="number" id="hours" name="hours" min="0" step="1" required>
+
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+
+        <button type="submit">Submit Survey</button>
       </form>
     </section>
   </main>
 
-    <section class="extended-footer">
-  <div class="footer-grid">
+  <!-- Extended Footer -->
+  <section class="extended-footer">
+    <div class="footer-grid">
 
-    <!-- Powered By Logo -->
-    <div class="footer-column">
-      <p style="color: red; font-style: italic;">Powered By</p>
-      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      <div class="footer-column">
+        <p style="color: red; font-style: italic;">Powered By</p>
+        <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      </div>
+
+      <div class="footer-column">
+        <h3>CONNECT</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login / Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p><strong>Address:</strong><br>
+        4465 Granite Drive<br>
+        Suite 700<br>
+        Rocklin, CA 95677</p>
+        <p><strong>Phone:</strong><br>(916) 543-1311</p>
+        <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+      </div>
+
     </div>
+  </section>
 
-    <!-- Connect -->
-    <div class="footer-column">
-      <h3>CONNECT</h3>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Discord</a></li>
-      </ul>
-    </div>
-
-    <!-- About -->
-    <div class="footer-column">
-      <h3>ABOUT</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login / Profile</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-column">
-      <h3>CONTACT</h3>
-      <p><strong>Address:</strong><br>
-      4465 Granite Drive<br>
-      Suite 700<br>
-      Rocklin, CA 95677</p>
-      <p><strong>Phone:</strong><br>(916) 543-1311</p>
-      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Footer -->
+  <!-- Final Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
-      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
-      <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org">Email</a>
-    </div>
+    <p>
+      &copy; 2025 AllegiantVETS by 
+      <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a> | 
+      <strong class="irs-id">IRS 501(c)(3) #27-4856683</strong>
+    </p>
   </footer>
+
+  <!-- JS: Load navbar -->
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

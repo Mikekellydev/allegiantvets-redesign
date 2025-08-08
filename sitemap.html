@@ -5,60 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sitemap - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .sitemap-list {
+      margin-top: 2rem;
+      columns: 2;
+      column-gap: 4rem;
+      padding-left: 1rem;
+    }
+
+    .sitemap-list li {
+      margin-bottom: 0.75rem;
+      list-style-type: square;
+    }
+
+    @media (max-width: 768px) {
+      .sitemap-list {
+        columns: 1;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Load Navbar -->
   <div id="navbar-container"></div>
 
   <main class="container">
-    <h1>Sitemap</h1>
+    <section class="page-header">
+      <h1>Site Map</h1>
+    </section>
 
-    <section class="sitemap-section">
-      <h2>Info</h2>
-      <ul>
+    <section class="page-content">
+      <p>Here’s a quick look at every page available on the AllegiantVETS website:</p>
+
+      <ul class="sitemap-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="whatwedo.html">What We Do</a></li>
-      </ul>
-    </section>
-
-    <section class="sitemap-section">
-      <h2>Programs</h2>
-      <ul>
-        <li><a href="resources.html">DOD SkillBridge – Overview</a></li>
-        <li><a href="resources.html">DOD COOL – Overview</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="community.html">Community</a></li>
-        <li><a href="partners.html">Partners</a></li>
-      </ul>
-    </section>
-
-    <section class="sitemap-section">
-      <h2>Veterans</h2>
-      <ul>
-        <li><a href="survey.html">Weekly Survey</a></li>
-        <li><a href="howtojoin.html">How to Join</a></li>
         <li><a href="events.html">Events</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </section>
-
-    <section class="sitemap-section">
-      <h2>Support</h2>
-      <ul>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login / Profile</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="howtojoin.html">How to Join</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="survey.html">Weekly Survey</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="404.html">404 Page</a></li>
         <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+        <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
       </ul>
     </section>
   </main>
 
+  <!-- Extended Footer -->
+  <section class="extended-footer">
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <p style="color: red; font-style: italic;">Powered By</p>
+        <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+      </div>
+
+      <div class="footer-column">
+        <h3>CONNECT</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login / Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751" target="_blank">Privacy Policy</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p><strong>Address:</strong><br>
+        4465 Granite Drive<br>
+        Suite 700<br>
+        Rocklin, CA 95677</p>
+        <p><strong>Phone:</strong><br>(916) 543-1311</p>
+        <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com">sparkwaveitservice.com</a></p>
+    <p>
+      &copy; 2025 AllegiantVETS by 
+      <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a> | 
+      <strong class="irs-id">IRS 501(c)(3) #27-4856683</strong>
+    </p>
   </footer>
 
+  <!-- JS: Load navbar -->
   <script>
-    // Load shared nav
     fetch('nav.html')
       .then(res => res.text())
       .then(data => {
