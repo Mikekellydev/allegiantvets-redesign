@@ -2,73 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AllegiantVETS - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Welcome to AllegiantVETS</h1>
-    <div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
 
-  <main>
-    <section class="hero">
-      <h2>Veterans Empowering Veterans</h2>
-      <p>We help transitioning service members and veterans gain meaningful careers in tech and IT through mentorship, community, and certification programs.</p>
-      <a href="howtojoin.html" class="btn">Join Now</a>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Veterans Empowering Veterans</h2>
+    <p>We help transitioning service members and veterans gain meaningful careers in tech and IT through mentorship, community, and certification programs.</p>
+    <a href="howtojoin.html" class="btn">Join Now</a>
+  </section>
 
-    <section class="features">
-      <div class="card">
-        <h3>Mentorship</h3>
-        <p>Connect with veterans who’ve walked the path before you and are ready to guide you through your career journey.</p>
-      </div>
-      <div class="card">
-        <h3>Certifications</h3>
-        <p>Access training materials and resources to earn IT certifications that employers trust.</p>
-      </div>
-      <div class="card">
-        <h3>Community</h3>
-        <p>You're never alone. Join a supportive, accountability-driven network of fellow veterans.</p>
-      </div>
-    </section>
+  <!-- Features Section -->
+  <section class="features container">
+    <div class="card">
+      <h3>Mentorship</h3>
+      <p>Connect with veterans who’ve walked the path before you and are ready to guide you through your career journey.</p>
+    </div>
+    <div class="card">
+      <h3>Certifications</h3>
+      <p>Access training materials and resources to earn IT certifications that employers trust.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>You’re never alone. Join a supportive, accountability-driven network of fellow veterans.</p>
+    </div>
+  </section>
 
-    <section class="cta">
-      <h2>Ready to Get Started?</h2>
-      <p>Take the next step in your transition and join a community committed to your success.</p>
-      <a href="howtojoin.html" class="btn">Learn How to Join</a>
-    </section>
-  </main>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Take the next step in your transition and join a community committed to your success.</p>
+    <a href="howtojoin.html" class="btn">Learn How to Join</a>
+  </section>
 
+  <section class="extended-footer">
+  <div class="footer-grid">
+
+    <!-- Powered By Logo -->
+    <div class="footer-column">
+      <p style="color: red; font-style: italic;">Powered By</p>
+      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+    </div>
+
+    <!-- Connect -->
+    <div class="footer-column">
+      <h3>CONNECT</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h3>ABOUT</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html" target="_blank">Login / Profile</a></li>
+        <li><a href="contact.html" target="_blank">Contact</a></li>
+        <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
+        <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751"target="_blank">Privacy Policy</a></li>
+        <li><a href="sitemap.html"target="_blank">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <p><strong>Address:</strong><br>
+      4465 Granite Drive<br>
+      Suite 700<br>
+      Rocklin, CA 95677</p>
+      <p><strong>Phone:</strong><br>(916) 543-1311</p>
+      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
+    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
+      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a>
+    </p>
+    <div class="footer-social">
       <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
       <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
       <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank">Email</a>
+      <a href="mailto:info@allegiantvets.org">Email</a>
     </div>
   </footer>
+<!-- Navbar Placeholder Script -->
   <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
 </script>
 </body>
 </html>

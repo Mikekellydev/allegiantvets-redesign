@@ -2,65 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Member Login</h1>
-  <div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/logos/AllegiantVets Logo.jpeg" alt="AllegiantVETS Logo" height="40">
+      </a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <div class="submenu">
+        <button class="submenu-toggle">Tools & Support ▾</button>
+        <div class="submenu-content">
+          <a href="resources.html">Resources</a>
+          <a href="survey.html">Survey</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a href="faq.html">FAQ</a>
+      <a href="events.html">Events</a>
+      <a href="login.html" class="active">Login</a>
+    </nav>
+  </div>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome Back!</h2>
-      <p>Log in with your email and passcode to access your dashboard and resources.</p>
-    </section>
+  <!-- Hero -->
+  <section class="page-header">
+  <div class="container">
+    <h1>Login</h1>
+  </div>
+</section>
 
-    <section class="form-section">
-      <form id="login-form" action="/dashboard.html" method="POST">
+  <!-- Login Form -->
+  <main class="container">
+    <section class="card" style="max-width: 400px; margin: 0 auto;">
+      <form>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-        <label for="passkey">Passkey</label>
-        <input type="password" id="passkey" name="passkey" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="********" required>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn-primary">Login</button>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+          Need access? <a href="howtojoin.html">Learn how to join</a>.
+        </p>
       </form>
-
-      <p style="text-align:center; margin-top:1rem;">Need help? <a href="mailto:info@allegiantvets.org">Contact support</a></p>
     </section>
   </main>
 
+    <section class="extended-footer">
+  <div class="footer-grid">
+
+    <!-- Powered By Logo -->
+    <div class="footer-column">
+      <p style="color: red; font-style: italic;">Powered By</p>
+      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+    </div>
+
+    <!-- Connect -->
+    <div class="footer-column">
+      <h3>CONNECT</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h3>ABOUT</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login / Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <p><strong>Address:</strong><br>
+      4465 Granite Drive<br>
+      Suite 700<br>
+      Rocklin, CA 95677</p>
+      <p><strong>Phone:</strong><br>(916) 543-1311</p>
+      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
+    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
+      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
+    <div class="footer-social">
       <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
       <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
       <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank">Email</a>
+      <a href="mailto:info@allegiantvets.org">Email</a>
     </div>
   </footer>
-  <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
 </body>
 </html>

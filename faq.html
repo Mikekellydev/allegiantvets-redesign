@@ -2,80 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Frequently Asked Questions</h1>
-    <nav>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/logos/AllegiantVets Logo.jpeg" alt="AllegiantVETS Logo" height="40">
+      </a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="community.html">Community</a>
-      <a href="resources.html">Resources</a>
+      <div class="submenu">
+        <button class="submenu-toggle">Tools & Support ▾</button>
+        <div class="submenu-content">
+          <a href="resources.html">Resources</a>
+          <a href="survey.html">Survey</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
       <a href="faq.html" class="active">FAQ</a>
       <a href="events.html">Events</a>
-      <a href="survey.html">Survey</a>
       <a href="login.html">Login</a>
-      <a href="contact.html">Contact</a>
-    </nav><div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
+    </nav>
+  </div>
 
-  <main>
-    <section class="hero">
-      <h2>Have Questions? We’ve Got Answers.</h2>
-      <p>Explore answers to the most common questions about SkillBridge, OJT, Discord access, and more.</p>
-    </section>
+  <!-- Hero -->
+  <section class="page-header">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+</section>
 
-    <section class="features">
-      <div class="card">
-        <h3>What is AllegiantVETS?</h3>
-        <p>We’re a community-driven support network helping transitioning service members succeed in the civilian workforce, especially in IT and tech.</p>
-      </div>
-      <div class="card">
-        <h3>How do I join?</h3>
-        <p>Click “Join Now” on the homepage or visit the <a href="howtojoin.html">How to Join</a> page for step-by-step instructions to get onboarded and into the Discord community.</p>
-      </div>
-      <div class="card">
-        <h3>Is this program official SkillBridge?</h3>
-        <p>No, AllegiantVETS is a community support resource. However, we help you stay accountable, connected, and goal-driven while completing your approved SkillBridge with other organizations.</p>
-      </div>
-      <div class="card">
-        <h3>What’s required in the weekly survey?</h3>
-        <p>Your code word, hours, goals, partner connection, and optional comments. It helps you stay engaged and your mentor team stay informed.</p>
-      </div>
+  <!-- Collapsible FAQ Content -->
+  <main class="container">
+    <section class="card faq">
+      <details>
+        <summary>What is AllegiantVETS?</summary>
+        <p>AllegiantVETS is a veteran-led organization helping transitioning service members succeed in IT and tech careers through mentorship, certification support, and community empowerment.</p>
+      </details>
+
+      <details>
+        <summary>How does SkillBridge work with AllegiantVETS?</summary>
+        <p>SkillBridge allows active-duty service members to intern with companies during their last 180 days of service. AllegiantVETS partners with employers to place you in valuable IT-focused roles.</p>
+      </details>
+
+      <details>
+        <summary>Do I need IT experience to join?</summary>
+        <p>No prior experience is required. Many of our members are starting from scratch. We provide the roadmap and support to help you grow into tech roles.</p>
+      </details>
+
+      <details>
+        <summary>How do I track my weekly progress?</summary>
+        <p>Each week, you’ll complete an accountability survey to log your activities, hours, and goals. This helps you stay on track and allows us to support you better.</p>
+      </details>
+
+      <details>
+        <summary>Where can I connect with other members?</summary>
+        <p>Join our Discord server and attend weekly community calls, mentorship check-ins, and Empowerment Week events to build strong connections.</p>
+      </details>
     </section>
   </main>
 
+    <section class="extended-footer">
+  <div class="footer-grid">
+
+    <!-- Powered By Logo -->
+    <div class="footer-column">
+      <p style="color: red; font-style: italic;">Powered By</p>
+      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+    </div>
+
+    <!-- Connect -->
+    <div class="footer-column">
+      <h3>CONNECT</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h3>ABOUT</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login / Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <p><strong>Address:</strong><br>
+      4465 Granite Drive<br>
+      Suite 700<br>
+      Rocklin, CA 95677</p>
+      <p><strong>Phone:</strong><br>(916) 543-1311</p>
+      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
+    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
+      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
+    <div class="footer-social">
       <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
       <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
       <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank">Email</a>
+      <a href="mailto:info@allegiantvets.org">Email</a>
     </div>
   </footer>
+
+  <!-- Inline JS to auto-collapse others -->
   <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+    const allDetails = document.querySelectorAll("details");
+    allDetails.forEach((targetDetail) => {
+      targetDetail.addEventListener("click", () => {
+        allDetails.forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.removeAttribute("open");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

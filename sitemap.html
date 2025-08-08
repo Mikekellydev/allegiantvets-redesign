@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitemap - AllegiantVETS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main class="container">
+    <h1>Sitemap</h1>
+
+    <section class="sitemap-section">
+      <h2>Info</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="whatwedo.html">What We Do</a></li>
+      </ul>
+    </section>
+
+    <section class="sitemap-section">
+      <h2>Programs</h2>
+      <ul>
+        <li><a href="resources.html">DOD SkillBridge – Overview</a></li>
+        <li><a href="resources.html">DOD COOL – Overview</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="partners.html">Partners</a></li>
+      </ul>
+    </section>
+
+    <section class="sitemap-section">
+      <h2>Veterans</h2>
+      <ul>
+        <li><a href="survey.html">Weekly Survey</a></li>
+        <li><a href="howtojoin.html">How to Join</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </section>
+
+    <section class="sitemap-section">
+      <h2>Support</h2>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login / Profile</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com">sparkwaveitservice.com</a></p>
+  </footer>
+
+  <script>
+    // Load shared nav
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

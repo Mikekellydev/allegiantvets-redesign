@@ -2,70 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Resources - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Resources</h1>
-<div id="main-nav"></div>
-<script>
-  fetch('nav.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('main-nav').innerHTML = data;
-    })
-    .then(() => {
-      // Attach toggle function AFTER nav is loaded
-      window.toggleMenu = function () {
-        const nav = document.getElementById("nav-links");
-        nav.classList.toggle("open");
-      };
-    });
-</script>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="AllegiantVets Logo.jpeg" alt="AllegiantVETS Logo" height="40">
+      </a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="community.html">Community</a>
+      <div class="submenu">
+        <button class="submenu-toggle">Tools & Support ▾</button>
+        <div class="submenu-content">
+          <a href="resources.html" class="active">Resources</a>
+          <a href="survey.html">Survey</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a href="faq.html">FAQ</a>
+      <a href="events.html">Events</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </div>
 
-  <main>
-    <section class="hero">
-      <h2>Tools to Fuel Your Transition</h2>
-      <p>Access our curated library of learning platforms, cert guides, job boards, and partner resources.</p>
+  <!-- Hero -->
+  <section class="page-header">
+  <div class="container">
+    <h1>Resources</h1>
+  </div>
+</section>
+
+  <!-- Resource Cards -->
+  <main class="container">
+    <section class="card">
+      <h2>SkillBridge Guide</h2>
+      <p>Everything you need to know about applying, participating, and succeeding in the SkillBridge program.</p>
+      <a href="#" class="btn">Download PDF</a>
     </section>
 
-    <section class="features">
-      <div class="card">
-        <h3>Certification Guides</h3>
-        <p>Step-by-step resources for CompTIA, AWS, Google, Microsoft, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Learning Platforms</h3>
-        <p>Explore SkillBridge partner platforms like Coursera, Google Career Certificates, LinkedIn Learning, and IBM SkillsBuild.</p>
-      </div>
-      <div class="card">
-        <h3>Career Resources</h3>
-        <p>Download resume templates, interview prep guides, and salary negotiation tips.</p>
-      </div>
-      <div class="card">
-        <h3>Community Downloads</h3>
-        <p>Grab accountability trackers, OJT templates, and Discord onboarding checklists.</p>
-      </div>
+    <section class="card">
+      <h2>Resume Template</h2>
+      <p>Use this modern, military-to-civilian resume template to present your skills with clarity and confidence.</p>
+      <a href="#" class="btn">Download DOCX</a>
+    </section>
+
+    <section class="card">
+      <h2>LinkedIn Optimization Tips</h2>
+      <p>Quick wins and long-term strategies to get noticed by recruiters on LinkedIn.</p>
+      <a href="#" class="btn">View Tips</a>
+    </section>
+
+    <section class="card">
+      <h2>Learning Platforms</h2>
+      <p>Links to Coursera, LinkedIn Learning, and free IT certification providers.</p>
+      <a href="#" class="btn">Explore Platforms</a>
     </section>
   </main>
 
+    <section class="extended-footer">
+  <div class="footer-grid">
+
+    <!-- Powered By Logo -->
+    <div class="footer-column">
+      <p style="color: red; font-style: italic;">Powered By</p>
+      <img src="assets/images/allegiantgiving.jpg" alt="Allegiant Giving" class="footer-logo">
+    </div>
+
+    <!-- Connect -->
+    <div class="footer-column">
+      <h3>CONNECT</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h3>ABOUT</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login / Profile</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-column">
+      <h3>CONTACT</h3>
+      <p><strong>Address:</strong><br>
+      4465 Granite Drive<br>
+      Suite 700<br>
+      Rocklin, CA 95677</p>
+      <p><strong>Phone:</strong><br>(916) 543-1311</p>
+      <p><strong>Email:</strong><br><a href="mailto:Info@AllegiantVets.org">Info@AllegiantVets.org</a></p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service | <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
-    <div style="margin-top: 1rem;">
+    <p>&copy; 2025 AllegiantVETS by Sparkwave IT Service |
+      <a href="https://www.sparkwaveitservice.com" target="_blank">sparkwaveitservice.com</a></p>
+    <div class="footer-social">
       <a href="https://www.linkedin.com/company/allegiantvets" target="_blank">LinkedIn</a>
       <a href="https://twitter.com/allegiantvets" target="_blank">Twitter (X)</a>
       <a href="https://discord.com/invite/allegiantvets" target="_blank">Discord</a>
-      <a href="mailto:info@allegiantvets.org" target="_blank">Email</a>
+      <a href="mailto:info@allegiantvets.org">Email</a>
     </div>
   </footer>
-  <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
 </body>
 </html>
