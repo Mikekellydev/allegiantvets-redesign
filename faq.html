@@ -131,6 +131,10 @@
 
     function toggleFAQ(el) {
       const item = el.parentElement;
+      const list = document.querySelectorAll('.faq-item.active');
+      list.forEach(openItem => {
+        if (openItem !== item) openItem.classList.remove('active');
+      });
       item.classList.toggle('active');
     }
   </script>
