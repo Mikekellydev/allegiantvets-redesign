@@ -7,41 +7,83 @@
   <link rel="stylesheet" href="../style.css" />
   <script src="../js/script.js" defer></script>
   <style>
-    .dashboard {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .dash-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .dashboard { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+    .dash-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
     .dash-card { background: #f4f8fc; border-left: 5px solid #004477; border-radius: 6px; padding: 1rem; }
     .dash-card a { color: #004477; font-weight: 700; text-decoration: none; }
+    .section { background: #ffffff; border: 1px solid #e5eef7; border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+    .pill { display:inline-block; background:#003366; color:#fff; padding:0.25rem 0.5rem; border-radius:999px; font-size:0.8rem; }
+    .muted { color:#555; }
+    ul.compact { margin-left: 1rem; }
   </style>
 </head>
 <body>
   <div id="navbar-container"></div>
   <main class="container">
     <section class="page-header">
-      <h1>Welcome back, Michael Kelly</h1>
-      <p><strong>ID# 365073088</strong></p>
+      <h1 id="welcome">Welcome back</h1>
+      <p id="member-id"><strong>ID#</strong></p>
     </section>
+
     <section class="dashboard">
-      <div class="dash-cards">
+      <nav aria-label="Member quick nav" class="dash-cards">
+        <div class="dash-card">
+          <h3>Home</h3>
+          <p>SkillBridge details and actions are right here on your Home.</p>
+        </div>
+        <div class="dash-card">
+          <h3>Veteran Home</h3>
+          <p>Access veteran-specific resources and updates.</p>
+        </div>
+        <div class="dash-card">
+          <h3>What's New</h3>
+          <p>We\'ve updated your AllegiantVETS experience!</p>
+        </div>
         <div class="dash-card">
           <h3>Weekly Survey</h3>
-          <p>Submit this week's DOD SkillBridge Accountability Survey.</p>
+          <p>Submit this week's accountability survey.</p>
           <a href="weekly-survey.html">Open Survey</a>
         </div>
-        <div class="dash-card">
-          <h3>Community (Discord)</h3>
-          <p>Jump into your cohort channels and connect with mentors.</p>
-          <a href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Join Discord</a>
+      </nav>
+
+      <section class="section">
+        <h2>What's New</h2>
+        <ul class="compact">
+          <li>Everything is still here, just easier to find and work with.</li>
+          <li>Pages and other resources are in the drop-down menu near the upper-right.</li>
+          <li>SkillBridge details, updates, and actions are on this Home page.</li>
+          <li>Personal details are managed on your Profile via the menu.</li>
+          <li>If your Allegiant Rep updates details for you, visit your Profile to reset your localized data.</li>
+          <li>Coming Soon: integrated Job Search to quickly review prospects.</li>
+          <li>Don\'t forget the free resume service via menu.</li>
+          <li>We welcome your feedback to improve this site.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>SkillBridge</h2>
+        <div class="dash-cards">
+          <div class="dash-card"><strong>Messages</strong><br>You are Fully enrolled in the AllegiantVETS Skillbridge Program. Keep up with your WEEKLY attendance.</div>
+          <div class="dash-card"><strong>Progress</strong><br>Enrolled (Step 6.0)</div>
+          <div class="dash-card"><strong>Accepted</strong><br>2025-02-03</div>
+          <div class="dash-card"><strong>Approved</strong><br>2025-03-16</div>
+          <div class="dash-card"><strong>Track</strong><br>Information Technology</div>
+          <div class="dash-card"><strong>Track-Start</strong><br>2025-07-03</div>
+          <div class="dash-card"><strong>Track-End</strong><br>2025-10-31</div>
         </div>
-        <div class="dash-card">
-          <h3>Resources</h3>
-          <p>Courses, guides, and templates to accelerate your progress.</p>
-          <a href="../resources.html">Browse Resources</a>
-        </div>
-      </div>
+        <p class="muted" style="margin-top:0.5rem;">Use the buttons (above) to handle SkillBridge actions, or update other details via "SkillBridge" section in your Profile... HERE.</p>
+        <p><strong>Today's Accountability Code:</strong><br><span class="pill">0000</span></p>
+      </section>
+
+      <section class="section">
+        <h2>New Hot Jobs</h2>
+        <p class="muted">The Newest Job Postings from our Partners! Click on a Title to View... or search more jobs HERE.</p>
+        <ul>
+          <li>Community Safety Officer (Tahoe-Truckee Campus) | Truckee, CA (On-Prem)</li>
+          <li>Executive Assistant | Rocklin, CA (On-Prem)</li>
+          <li>Shift Supervisor- Pinebluff | Pinebluff, NC (On-Prem)</li>
+        </ul>
+      </section>
     </section>
   </main>
   <script>
@@ -50,6 +92,11 @@
       .then(html => {
         document.getElementById('navbar-container').innerHTML = html;
       });
+
+    const name = localStorage.getItem('memberName') || 'Member';
+    const id = localStorage.getItem('memberId') || '—';
+    document.getElementById('welcome').textContent = `Welcome back, ${name}`;
+    document.getElementById('member-id').innerHTML = `<strong>ID# ${id}</strong>`;
   </script>
 </body>
 </html>

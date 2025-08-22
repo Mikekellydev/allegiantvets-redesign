@@ -27,7 +27,8 @@
     }
 
     .login-container input[type="email"],
-    .login-container input[type="password"] {
+    .login-container input[type="password"],
+    .login-container input[type="text"] {
       width: 100%;
       padding: 0.75rem;
       border-radius: 5px;
@@ -61,12 +62,18 @@
   <main class="container">
     <div class="login-container">
       <h2>Member Login</h2>
-      <form action="#" method="post">
+      <form id="login-form" action="#" method="post">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g., Michael Kelly" autocomplete="name" required>
+
+        <label for="memberId">Member ID</label>
+        <input type="text" id="memberId" name="memberId" placeholder="e.g., 365073088" inputmode="numeric" pattern="[0-9]*" required>
 
         <button type="submit" class="btn">Log In</button>
       </form>
@@ -127,13 +134,27 @@
     </p>
   </footer>
 
-  <!-- JS: Load navbar -->
+  <!-- JS: Load navbar + login wire-up -->
   <script>
     fetch('nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
       });
+
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const id = document.getElementById('memberId').value.trim();
+      if (name && id) {
+        try {
+          localStorage.setItem('memberName', name);
+          localStorage.setItem('memberId', id);
+        } catch (err) {}
+      }
+      window.location.href = 'member/index.html';
+    });
   </script>
 </body>
 </html>
