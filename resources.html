@@ -19,6 +19,16 @@
       border-radius: 6px;
       padding: 1.5rem;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transform: translateY(0) scale(1);
+      will-change: transform, box-shadow;
+    }
+
+    .resource-card:hover,
+    .resource-card:focus-within {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      border-left-color: #e30613;
     }
 
     .resource-card h3 {
@@ -36,6 +46,13 @@
       margin-top: 0.5rem;
       font-weight: bold;
       color: #004477;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .resource-card a:hover,
+    .resource-card a:focus {
+      color: #e30613;
     }
   </style>
 </head>
