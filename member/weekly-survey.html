@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Survey - AllegiantVETS</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../js/script.js" defer></script>
+  <style>
+    .survey-wrapper { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    .survey-grid { display: grid; gap: 1rem; }
+    .field { background: #f4f8fc; border: 1px solid #dbe6f2; border-radius: 6px; padding: 1rem; }
+    .field h3 { margin-bottom: 0.5rem; }
+    .inline { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .pill { display: inline-block; background:#003366; color:#fff; padding: 0.25rem 0.5rem; border-radius: 999px; font-size: 0.8rem; }
+    .muted { color: #555; font-size: 0.95rem; }
+    input[type="text"], input[type="number"], input[type="date"], select, textarea { width: 100%; padding: 0.65rem; border-radius: 4px; border:1px solid #ccc; }
+    textarea { min-height: 100px; }
+    .submit { margin-top: 1rem; background:#e30613; color:#fff; border:0; border-radius: 6px; padding: 0.75rem 1rem; cursor:pointer; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="container">
+    <section class="page-header">
+      <h1>DOD SkillBridge Accountability Survey</h1>
+      <p class="muted">It is important to note that you must spend at least 40 hours a week on your transition. These hours are added weekly to ensure you comply with your MOU with the DOD.</p>
+    </section>
+
+    <section class="survey-wrapper">
+      <div class="field">
+        <div class="inline">
+          <div>
+            <div><strong>Type</strong></div>
+            <div>Weekly Accountability</div>
+          </div>
+          <div>
+            <div><strong>Label</strong></div>
+            <div>2025 Week 34</div>
+          </div>
+        </div>
+        <div class="inline" style="margin-top:0.5rem;">
+          <div>
+            <div><strong>Track</strong></div>
+            <div>(Enrolled) <span class="pill">Information Technology</span></div>
+          </div>
+          <div>
+            <div><strong>2025-07-03 - 2025-10-31</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="survey-grid" action="#" method="post">
+        <div class="field">
+          <label for="date"><strong>Date</strong></label>
+          <input type="date" id="date" name="date" value="2025-08-21">
+          <div class="muted">Enter a different meeting date if not today.</div>
+        </div>
+
+        <div class="field">
+          <label><input type="checkbox" name="attended"> <strong>Attended</strong></label>
+          <div class="muted">Check ONLY if you actually attended the meeting. If not, explain in Comments (below).</div>
+        </div>
+
+        <div class="field">
+          <label for="code"><strong>Code</strong></label>
+          <input type="number" id="code" name="code" value="0">
+          <div class="muted">Enter the four digit code provided at the meeting. If you were AWOL, enter "9999" and explain in Comments.</div>
+        </div>
+
+        <div class="field">
+          <label for="goal"><strong>Weekly Goal</strong></label>
+          <input type="text" id="goal" name="goal" placeholder="What is your main focus for this week?">
+        </div>
+
+        <div class="field">
+          <label for="partners"><strong>Partner Connections</strong></label>
+          <select id="partners" name="partners" multiple>
+            <option>7 Eagle Group</option>
+            <option>HireMilitary</option>
+            <option>Coursera</option>
+            <option>Other Partner</option>
+          </select>
+          <div class="muted">Select Top three Partners you think are beneficial or would like a connection with.</div>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="liveHours"><strong>Live Training</strong></label>
+            <input type="number" id="liveHours" name="liveHours" value="0">
+            <div class="muted">Select hours of live-person-led learning/training (virtual or on-premises).</div>
+          </div>
+          <div>
+            <label for="ojtHours"><strong>On-The-Job Training</strong></label>
+            <input type="number" id="ojtHours" name="ojtHours" value="0">
+            <div class="muted">Select hours of approved OJT. Combined Live + OJT must be ≥ 20.</div>
+          </div>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="asyncHours"><strong>Asynchronous (Other) Training</strong></label>
+            <input type="number" id="asyncHours" name="asyncHours" value="0">
+            <div class="muted">On-demand/self-paced training, including any VA Claim hours.</div>
+          </div>
+          <div>
+            <label for="networkHours"><strong>Networking</strong></label>
+            <input type="number" id="networkHours" name="networkHours" value="0">
+          </div>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="huntHours"><strong>Hunting / Searching</strong></label>
+            <input type="number" id="huntHours" name="huntHours" value="0">
+          </div>
+          <div>
+            <label for="relocationHours"><strong>Relocation</strong></label>
+            <input type="number" id="relocationHours" name="relocationHours" value="0">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="accountable"><strong>Accountable Hours</strong></label>
+          <input type="number" id="accountable" name="accountable" value="0">
+          <div class="muted">This Week's total hours dedicated to Training, Networking, Job Hunting, and Relocation.</div>
+        </div>
+
+        <div class="field">
+          <label for="vaStatus"><strong>VA Claim Status</strong></label>
+          <select id="vaStatus" name="vaStatus">
+            <option>Not started</option>
+            <option>In progress</option>
+            <option>Submitted</option>
+            <option>Resolved</option>
+          </select>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="programs"><strong>Programs</strong></label>
+            <input type="number" id="programs" name="programs" value="0">
+          </div>
+          <div>
+            <label for="applied"><strong>Applied</strong></label>
+            <input type="number" id="applied" name="applied" value="0">
+          </div>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="interviews"><strong>Interviews</strong></label>
+            <input type="number" id="interviews" name="interviews" value="0">
+          </div>
+          <div>
+            <label for="offers"><strong>Offers</strong></label>
+            <input type="number" id="offers" name="offers" value="0">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="accepted"><strong>Accepted</strong></label>
+          <select id="accepted" name="accepted">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="assistance"><strong>Assistance</strong></label>
+          <label><input type="checkbox" id="assistance" name="assistance"> Check if you need assistance finding a job.</label>
+        </div>
+
+        <div class="field inline">
+          <div>
+            <label for="satisfaction"><strong>Satisfaction</strong></label>
+            <input type="number" id="satisfaction" name="satisfaction" value="0" min="0" max="10">
+            <div class="muted">With 10 highest and 1 lowest. If not 10, please explain below.</div>
+          </div>
+          <div>
+            <label for="recommend"><strong>Recommend</strong></label>
+            <input type="number" id="recommend" name="recommend" value="0" min="0" max="10">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="support"><strong>Support</strong></label>
+          <label><input type="checkbox" id="support" name="support"> Check if you require further support beyond what is provided.</label>
+        </div>
+
+        <div class="field">
+          <label for="comments"><strong>Comments</strong></label>
+          <textarea id="comments" name="comments" placeholder="Enter any Comments here or further details as instructed."></textarea>
+        </div>
+
+        <div class="field">
+          <label><input type="checkbox" id="firstWeek" name="firstWeek"> <strong>First Week?</strong></label>
+        </div>
+
+        <button class="submit" type="submit">Submit Survey</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    fetch('../nav.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('navbar-container').innerHTML = html; });
+  </script>
+</body>
+</html>
