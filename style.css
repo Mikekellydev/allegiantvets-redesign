@@ -464,3 +464,107 @@ footer a {
 .contact-form .btn:hover {
   background-color: #ba0510;
 }
+
+/* Homepage modern sections */
+.section {
+  padding: 3rem 1rem;
+}
+
+.section.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Intro pillars */
+.pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pillar {
+  background: #ffffff;
+  border: 1px solid #d7e6f5;
+  color: #003366;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Programs cards (SkillBridge / COOL) */
+.section.container .program {
+  background: #f8f9fa;
+  border-left: 5px solid #004477;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.04);
+}
+
+@media (min-width: 768px) {
+  .section.container .program {
+    margin-bottom: 0;
+  }
+  /* Make program cards sit side-by-side when possible */
+  .section.container {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+.section.container .program .btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* Testimonial */
+.testimonial blockquote {
+  background: #ffffff;
+  border-left: 4px solid #e30613;
+  padding: 1.25rem 1rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* Partners */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.partner {
+  background: #f4f8fc;
+  border: 1px solid #e5eef7;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: #003366;
+}
+
+/* Newsletter */
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.newsletter-grid input[disabled] {
+  background: #f3f6fb;
+  color: #6b7b91;
+  border: 1px solid #d7e6f5;
+}
+
+.newsletter .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (min-width: 600px) {
+  .newsletter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
