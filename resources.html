@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources - AllegiantVETS</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="js/script.js" defer></script>
   <style>
     .resource-grid {
       display: grid;
@@ -13,12 +14,82 @@
       margin-top: 2rem;
     }
 
+    /* Benefits bar */
+    .benefits-bar {
+      background: #f8f9fc;
+      border: 1px solid #e5eef7;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .benefits-heading {
+      font-size: 1rem;
+      color: #002f5a;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .benefit-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .benefit-badge {
+      background: #ffffff;
+      border: 1px solid #d7e6f5;
+      color: #003366;
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .benefit-dot {
+      width: 6px;
+      height: 6px;
+      background: #e30613;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
     .resource-card {
       background: #f4f8fc;
       border-left: 5px solid #004477;
       border-radius: 6px;
       padding: 1.5rem;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      transform: translateY(0) scale(1);
+      will-change: transform, box-shadow;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resource-card:hover,
+    .resource-card:focus-within {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      border-left-color: #e30613;
+    }
+
+    .members-pill {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(227, 6, 19, 0.95);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .resource-card h3 {
@@ -36,6 +107,79 @@
       margin-top: 0.5rem;
       font-weight: bold;
       color: #004477;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .resource-card a:hover,
+    .resource-card a:focus {
+      color: #e30613;
+    }
+
+    /* Overlay reveal */
+    .resource-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 47, 90, 0.9), rgba(0, 51, 102, 0.95));
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: center;
+      padding: 1.25rem;
+      opacity: 0;
+      transform: translateY(10%);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .resource-card:hover .resource-overlay,
+    .resource-card:focus-within .resource-overlay {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .resource-overlay .overlay-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .resource-overlay .overlay-meta {
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .resource-overlay .resource-cta {
+      margin-top: 0.25rem;
+      background-color: #e30613;
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      border: 0;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .resource-overlay .resource-cta:hover,
+    .resource-overlay .resource-cta:focus {
+      background-color: #ba0510;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .resource-overlay .resource-cta:focus-visible {
+      outline: 2px solid #aad4ff;
+      outline-offset: 2px;
+    }
+
+    .members-only {
+      font-size: 0.75rem;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -52,35 +196,82 @@
     <section class="page-content">
       <p>Explore tools, training, and documents to help you along your career transition journey.</p>
 
+      <div class="benefits-bar" aria-label="What members get">
+        <div class="benefits-heading">What members get</div>
+        <div class="benefit-badges">
+          <span class="benefit-badge"><span class="benefit-dot"></span> 1:1 Mentorship</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Weekly Accountability</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Study Cohorts</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Resume Reviews</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Partner Intros & Discounts</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Job Search Support</span>
+        </div>
+      </div>
+
       <div class="resource-grid">
         <div class="resource-card">
+          <span class="members-pill">Members only</span>
           <h3>Google IT Support Certification</h3>
           <p>Start here for the Coursera-hosted certification series. Tailored for entry-level IT roles.</p>
-          <a href="https://coursera.org" target="_blank">Access Course</a>
+          <a href="https://coursera.org" target="_blank" rel="noopener">Access Course</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Members get guided support</div>
+            <div class="overlay-meta">Cohort study group • Mentor check-ins • Exam fee guidance</div>
+            <a class="resource-cta" href="howtojoin.html">Join for Cohort Support</a>
+            <div class="members-only">Included with membership</div>
+          </div>
         </div>
 
         <div class="resource-card">
+          <span class="members-pill">Members only</span>
           <h3>Resume Template</h3>
           <p>A downloadable Word document to help you craft a powerful, transition-ready resume.</p>
-          <a href="#">Download Template</a>
+          <a href="resume-template.html">Download Template</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Members get expert feedback</div>
+            <div class="overlay-meta">ATS-ready format • Tailoring tips • Reviewer feedback</div>
+            <a class="resource-cta" href="howtojoin.html">Get Resume Review</a>
+            <div class="members-only">Included with membership</div>
+          </div>
         </div>
 
         <div class="resource-card">
+          <span class="members-pill">Members only</span>
           <h3>Discord User Guide</h3>
           <p>New to Discord? No problem. This quick-start guide will get you up and running fast.</p>
-          <a href="#">View Guide</a>
+          <a href="discord-guide.html">View Guide</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Members get instant access</div>
+            <div class="overlay-meta">24/7 community • Channels by track • Safe space for vets</div>
+            <a class="resource-cta" href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Join Discord</a>
+            <div class="members-only">Invite provided after signup</div>
+          </div>
         </div>
 
         <div class="resource-card">
+          <span class="members-pill">Members only</span>
           <h3>Partner Resources</h3>
           <p>Explore tools and platforms offered by our job placement and certification partners.</p>
-          <a href="#">See Resources</a>
+          <a href="partners.html">See Resources</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Members get warm introductions</div>
+            <div class="overlay-meta">Partner discounts • Recruiter visibility • Interview pipelines</div>
+            <a class="resource-cta" href="howtojoin.html">Become a Member</a>
+            <div class="members-only">Benefits unlocked after signup</div>
+          </div>
         </div>
 
         <div class="resource-card">
+          <span class="members-pill">Members only</span>
           <h3>Weekly Survey Instructions</h3>
           <p>Need help filling out your weekly accountability survey? Here's a quick walk-through.</p>
-          <a href="#">Open Guide</a>
+          <a href="survey.html">Open Guide</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Members get accountability</div>
+            <div class="overlay-meta">Track progress • Stay consistent • Get mentor feedback</div>
+            <a class="resource-cta" href="howtojoin.html">Join & Start Surveys</a>
+            <div class="members-only">Core part of the program</div>
+          </div>
         </div>
       </div>
     </section>
@@ -98,11 +289,9 @@
       <div class="footer-column">
         <h3>CONNECT</h3>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Discord</a></li>
+          <li><a href="https://twitter.com/allegiantvets" target="_blank" rel="noopener">Twitter (X)</a></li>
+          <li><a href="https://www.linkedin.com/company/allegiantvets" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Discord</a></li>
         </ul>
       </div>
 

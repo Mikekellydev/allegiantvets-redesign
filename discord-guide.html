@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord User Guide - AllegiantVETS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="container">
+    <section class="page-header">
+      <h1>Discord User Guide</h1>
+    </section>
+    <section class="page-content">
+      <p>Follow these quick steps to join our community and get connected with mentors and peers.</p>
+      <ol>
+        <li>Create a Discord account (free).</li>
+        <li>Join our server with your invite link.</li>
+        <li>Introduce yourself in the welcome channel.</li>
+        <li>Pick your learning track and join the cohort channel.</li>
+        <li>Turn on notifications for important updates.</li>
+      </ol>
+      <p><strong>Need an invite?</strong></p>
+      <a class="btn" href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Join Discord</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AllegiantVETS by <a href="https://www.sparkwaveitservice.com" target="_blank">Sparkwave IT Service</a></p>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
