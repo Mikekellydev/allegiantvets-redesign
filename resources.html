@@ -13,6 +13,50 @@
       margin-top: 2rem;
     }
 
+    /* Benefits bar */
+    .benefits-bar {
+      background: #f8f9fc;
+      border: 1px solid #e5eef7;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .benefits-heading {
+      font-size: 1rem;
+      color: #002f5a;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .benefit-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .benefit-badge {
+      background: #ffffff;
+      border: 1px solid #d7e6f5;
+      color: #003366;
+      border-radius: 999px;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .benefit-dot {
+      width: 6px;
+      height: 6px;
+      background: #e30613;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
     .resource-card {
       background: #f4f8fc;
       border-left: 5px solid #004477;
@@ -117,6 +161,11 @@
       outline: 2px solid #aad4ff;
       outline-offset: 2px;
     }
+
+    .members-only {
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
@@ -132,15 +181,28 @@
     <section class="page-content">
       <p>Explore tools, training, and documents to help you along your career transition journey.</p>
 
+      <div class="benefits-bar" aria-label="What members get">
+        <div class="benefits-heading">What members get</div>
+        <div class="benefit-badges">
+          <span class="benefit-badge"><span class="benefit-dot"></span> 1:1 Mentorship</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Weekly Accountability</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Study Cohorts</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Resume Reviews</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Partner Intros & Discounts</span>
+          <span class="benefit-badge"><span class="benefit-dot"></span> Job Search Support</span>
+        </div>
+      </div>
+
       <div class="resource-grid">
         <div class="resource-card">
           <h3>Google IT Support Certification</h3>
           <p>Start here for the Coursera-hosted certification series. Tailored for entry-level IT roles.</p>
           <a href="https://coursera.org" target="_blank" rel="noopener">Access Course</a>
           <div class="resource-overlay" aria-hidden="true">
-            <div class="overlay-title">Beginner-friendly, job-aligned</div>
-            <div class="overlay-meta">Time: 3–6 months • Hands-on labs • Shareable certificate</div>
-            <a class="resource-cta" href="https://coursera.org" target="_blank" rel="noopener">Start Learning</a>
+            <div class="overlay-title">Members get guided support</div>
+            <div class="overlay-meta">Cohort study group • Mentor check-ins • Exam fee guidance</div>
+            <a class="resource-cta" href="howtojoin.html">Join for Cohort Support</a>
+            <div class="members-only">Included with membership</div>
           </div>
         </div>
 
@@ -149,9 +211,10 @@
           <p>A downloadable Word document to help you craft a powerful, transition-ready resume.</p>
           <a href="#">Download Template</a>
           <div class="resource-overlay" aria-hidden="true">
-            <div class="overlay-title">ATS-friendly, veteran-ready</div>
-            <div class="overlay-meta">Format: .docx • Modern sections • Editable guidance</div>
-            <a class="resource-cta" href="#">Download .docx</a>
+            <div class="overlay-title">Members get expert feedback</div>
+            <div class="overlay-meta">ATS-ready format • Tailoring tips • Reviewer feedback</div>
+            <a class="resource-cta" href="howtojoin.html">Get Resume Review</a>
+            <div class="members-only">Included with membership</div>
           </div>
         </div>
 
@@ -160,9 +223,10 @@
           <p>New to Discord? No problem. This quick-start guide will get you up and running fast.</p>
           <a href="#">View Guide</a>
           <div class="resource-overlay" aria-hidden="true">
-            <div class="overlay-title">Get connected fast</div>
-            <div class="overlay-meta">5‑minute read • Screenshots • Safety tips</div>
-            <a class="resource-cta" href="#">Open Guide</a>
+            <div class="overlay-title">Members get instant access</div>
+            <div class="overlay-meta">24/7 community • Channels by track • Safe space for vets</div>
+            <a class="resource-cta" href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Join Discord</a>
+            <div class="members-only">Invite provided after signup</div>
           </div>
         </div>
 
@@ -171,9 +235,10 @@
           <p>Explore tools and platforms offered by our job placement and certification partners.</p>
           <a href="#">See Resources</a>
           <div class="resource-overlay" aria-hidden="true">
-            <div class="overlay-title">Curated partner tools</div>
-            <div class="overlay-meta">Job boards • Skill portals • Discounts</div>
-            <a class="resource-cta" href="#">Browse Partners</a>
+            <div class="overlay-title">Members get warm introductions</div>
+            <div class="overlay-meta">Partner discounts • Recruiter visibility • Interview pipelines</div>
+            <a class="resource-cta" href="howtojoin.html">Become a Member</a>
+            <div class="members-only">Benefits unlocked after signup</div>
           </div>
         </div>
 
@@ -182,9 +247,10 @@
           <p>Need help filling out your weekly accountability survey? Here's a quick walk-through.</p>
           <a href="#">Open Guide</a>
           <div class="resource-overlay" aria-hidden="true">
-            <div class="overlay-title">Stay on track weekly</div>
-            <div class="overlay-meta">2‑minute form • Progress tracking • Accountability</div>
-            <a class="resource-cta" href="#">View Instructions</a>
+            <div class="overlay-title">Members get accountability</div>
+            <div class="overlay-meta">Track progress • Stay consistent • Get mentor feedback</div>
+            <a class="resource-cta" href="howtojoin.html">Join & Start Surveys</a>
+            <div class="members-only">Core part of the program</div>
           </div>
         </div>
       </div>
