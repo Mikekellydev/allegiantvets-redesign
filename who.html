@@ -96,8 +96,6 @@
       <div class="footer-column">
         <h3>CONNECT</h3>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
           <li><a href="https://twitter.com/allegiantvets" target="_blank" rel="noopener">Twitter (X)</a></li>
           <li><a href="https://www.linkedin.com/company/allegiantvets" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Discord</a></li>
@@ -140,7 +138,7 @@
 
   <!-- JS: Load navbar -->
   <script>
-    fetch('nav.html')
+    fetch('/nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
