@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Dashboard - AllegiantVETS</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../js/script.js" defer></script>
+  <style>
+    .dashboard {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .dash-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .dash-card { background: #f4f8fc; border-left: 5px solid #004477; border-radius: 6px; padding: 1rem; }
+    .dash-card a { color: #004477; font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <main class="container">
+    <section class="page-header">
+      <h1>Welcome back, Michael Kelly</h1>
+      <p><strong>ID# 365073088</strong></p>
+    </section>
+    <section class="dashboard">
+      <div class="dash-cards">
+        <div class="dash-card">
+          <h3>Weekly Survey</h3>
+          <p>Submit this week's DOD SkillBridge Accountability Survey.</p>
+          <a href="weekly-survey.html">Open Survey</a>
+        </div>
+        <div class="dash-card">
+          <h3>Community (Discord)</h3>
+          <p>Jump into your cohort channels and connect with mentors.</p>
+          <a href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Join Discord</a>
+        </div>
+        <div class="dash-card">
+          <h3>Resources</h3>
+          <p>Courses, guides, and templates to accelerate your progress.</p>
+          <a href="../resources.html">Browse Resources</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    fetch('../nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
