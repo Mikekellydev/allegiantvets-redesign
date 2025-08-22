@@ -134,7 +134,7 @@
 
   <!-- JS: Load navbar + login wire-up -->
   <script>
-    fetch('/nav.html')
+    fetch('nav.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-container').innerHTML = data;
