@@ -14,32 +14,77 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h2>Veterans Empowering Veterans</h2>
-    <p>We help transitioning service members and veterans gain meaningful careers in tech and IT through mentorship, community, and certification programs.</p>
-    <a href="howtojoin.html" class="btn">Join Now</a>
+    <h2>Empowering Today's Heroes</h2>
+    <p><strong>becoming Tomorrow's Leaders</strong></p>
+    <p>The Bridge from Military Service to Civilian Success. Navigating the world beyond service requires a blend of resilience, adaptability, and community. At AllegiantVETS, we empower your journey every step of the way.</p>
+    <a href="/howtojoin.html" class="btn">Apply to SkillBridge</a>
   </section>
 
-  <!-- Features Section -->
-  <section class="features container">
-    <div class="card">
-      <h3>Mentorship</h3>
-      <p>Connect with veterans who’ve walked the path before you and are ready to guide you through your career journey.</p>
-    </div>
-    <div class="card">
-      <h3>Certifications</h3>
-      <p>Access training materials and resources to earn IT certifications that employers trust.</p>
-    </div>
-    <div class="card">
-      <h3>Community</h3>
-      <p>You’re never alone. Join a supportive, accountability-driven network of fellow veterans.</p>
+  <!-- Always By Your Side -->
+  <section class="section intro container">
+    <h2>Always By Your Side</h2>
+    <p>AllegiantVETS is here to ignite your post-military career journey with energy and guidance. If you're a veteran aiming for your next professional milestone or an employer scouting exceptional skills, you've found your crew. Tap into our dynamic resources and let us chart a course to your ambitions with opportunities that resonate. Together, we'll navigate the transition with vigor, vision, and cool confidence for a thriving tomorrow.</p>
+
+    <div class="pillars">
+      <span class="pillar">Community</span>
+      <span class="pillar">Transition</span>
+      <span class="pillar">Impact</span>
+      <span class="pillar">Opportunity</span>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Ready to Get Started?</h2>
-    <p>Take the next step in your transition and join a community committed to your success.</p>
-    <a href="howtojoin.html" class="btn">Learn How to Join</a>
+  <!-- Programs: SkillBridge & COOL -->
+  <section class="section container">
+    <div class="program">
+      <h3>SkillBridge</h3>
+      <p>Join thousands of transitioning military members in gaining valuable skills and experience before transitioning to civilian life.</p>
+      <a class="btn" href="/howtojoin.html">More About SkillBridge</a>
+    </div>
+
+    <div class="program">
+      <h3>Professional Certification</h3>
+      <p>Elevate your active duty experience with the DOD Military COOL program and transform your military expertise into sought-after civilian credentials.</p>
+      <a class="btn" href="https://www.cool.osd.mil/" target="_blank" rel="noopener">More About COOL</a>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="section testimonial container">
+    <blockquote>
+      “Allegiant helped me transition smoothly into my new career. If you're looking for career resources or guidance, Allegiant Giving is the place for you.”
+    </blockquote>
+  </section>
+
+  <!-- Our Partners -->
+  <section class="section container">
+    <h2>Our Partners</h2>
+    <div class="partners-grid">
+      <div class="partner">Partner</div>
+      <div class="partner">Partner</div>
+      <div class="partner">Partner</div>
+      <div class="partner">Partner</div>
+      <div class="partner">Partner</div>
+    </div>
+    <p style="text-align:center; margin-top: 1rem;"><a class="btn" href="/partners.html">Learn More</a></p>
+  </section>
+
+  <!-- Stay Connected (placeholder) -->
+  <section class="section newsletter container">
+    <h2>Stay Connected</h2>
+    <p>Sign up for our newsletter... coming soon... to stay updated on the latest news about Allegiant's programs, partnerships, and more.</p>
+    <form onsubmit="return false;" aria-disabled="true">
+      <div class="newsletter-grid">
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" type="text" placeholder="John Doe" disabled>
+        </div>
+        <div>
+          <label for="email">Your E‑Mail Address</label>
+          <input id="email" type="email" placeholder="you@example.com" disabled>
+        </div>
+      </div>
+      <button class="btn" disabled>Coming Soon</button>
+    </form>
   </section>
 
   <section class="extended-footer">
@@ -53,8 +98,8 @@
 
     <!-- Connect -->
     <div class="footer-column">
-              <h3>CONNECT</h3>
-              <ul>
+      <h3>CONNECT</h3>
+      <ul>
         <li><a href="https://twitter.com/allegiantvets" target="_blank" rel="noopener">Twitter (X)</a></li>
         <li><a href="https://www.linkedin.com/company/allegiantvets" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://discord.com/invite/allegiantvets" target="_blank" rel="noopener">Discord</a></li>
@@ -65,12 +110,12 @@
     <div class="footer-column">
       <h3>ABOUT</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html" target="_blank">Login / Profile</a></li>
-        <li><a href="contact.html" target="_blank">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/login.html" target="_blank">Login / Profile</a></li>
+        <li><a href="/contact.html" target="_blank">Contact</a></li>
         <li><a href="https://www.freeprivacypolicy.com/live/8c1e8780-cb73-40cb-967f-cab2b2c58024" target="_blank">Terms & Conditions</a></li>
         <li><a href="https://www.freeprivacypolicy.com/live/117e3689-2b19-46cb-b8c1-2ac2a515f751"target="_blank">Privacy Policy</a></li>
-        <li><a href="sitemap.html"target="_blank">Sitemap</a></li>
+        <li><a href="/sitemap.html"target="_blank">Sitemap</a></li>
       </ul>
     </div>
 
@@ -101,7 +146,7 @@
       <a href="mailto:info@allegiantvets.org">Email</a>
     </div>
   </footer>
-<!-- Navbar Placeholder Script -->
+  <!-- Navbar Placeholder Script -->
   <script>
   fetch('/nav.html')
     .then(response => response.text())
