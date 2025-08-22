@@ -22,6 +22,8 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       transform: translateY(0) scale(1);
       will-change: transform, box-shadow;
+      position: relative;
+      overflow: hidden;
     }
 
     .resource-card:hover,
@@ -54,6 +56,67 @@
     .resource-card a:focus {
       color: #e30613;
     }
+
+    /* Overlay reveal */
+    .resource-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 47, 90, 0.9), rgba(0, 51, 102, 0.95));
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: center;
+      padding: 1.25rem;
+      opacity: 0;
+      transform: translateY(10%);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+
+    .resource-card:hover .resource-overlay,
+    .resource-card:focus-within .resource-overlay {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .resource-overlay .overlay-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .resource-overlay .overlay-meta {
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
+
+    .resource-overlay .resource-cta {
+      margin-top: 0.25rem;
+      background-color: #e30613;
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      border: 0;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .resource-overlay .resource-cta:hover,
+    .resource-overlay .resource-cta:focus {
+      background-color: #ba0510;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .resource-overlay .resource-cta:focus-visible {
+      outline: 2px solid #aad4ff;
+      outline-offset: 2px;
+    }
   </style>
 </head>
 <body>
@@ -73,31 +136,56 @@
         <div class="resource-card">
           <h3>Google IT Support Certification</h3>
           <p>Start here for the Coursera-hosted certification series. Tailored for entry-level IT roles.</p>
-          <a href="https://coursera.org" target="_blank">Access Course</a>
+          <a href="https://coursera.org" target="_blank" rel="noopener">Access Course</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Beginner-friendly, job-aligned</div>
+            <div class="overlay-meta">Time: 3–6 months • Hands-on labs • Shareable certificate</div>
+            <a class="resource-cta" href="https://coursera.org" target="_blank" rel="noopener">Start Learning</a>
+          </div>
         </div>
 
         <div class="resource-card">
           <h3>Resume Template</h3>
           <p>A downloadable Word document to help you craft a powerful, transition-ready resume.</p>
           <a href="#">Download Template</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">ATS-friendly, veteran-ready</div>
+            <div class="overlay-meta">Format: .docx • Modern sections • Editable guidance</div>
+            <a class="resource-cta" href="#">Download .docx</a>
+          </div>
         </div>
 
         <div class="resource-card">
           <h3>Discord User Guide</h3>
           <p>New to Discord? No problem. This quick-start guide will get you up and running fast.</p>
           <a href="#">View Guide</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Get connected fast</div>
+            <div class="overlay-meta">5‑minute read • Screenshots • Safety tips</div>
+            <a class="resource-cta" href="#">Open Guide</a>
+          </div>
         </div>
 
         <div class="resource-card">
           <h3>Partner Resources</h3>
           <p>Explore tools and platforms offered by our job placement and certification partners.</p>
           <a href="#">See Resources</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Curated partner tools</div>
+            <div class="overlay-meta">Job boards • Skill portals • Discounts</div>
+            <a class="resource-cta" href="#">Browse Partners</a>
+          </div>
         </div>
 
         <div class="resource-card">
           <h3>Weekly Survey Instructions</h3>
           <p>Need help filling out your weekly accountability survey? Here's a quick walk-through.</p>
           <a href="#">Open Guide</a>
+          <div class="resource-overlay" aria-hidden="true">
+            <div class="overlay-title">Stay on track weekly</div>
+            <div class="overlay-meta">2‑minute form • Progress tracking • Accountability</div>
+            <a class="resource-cta" href="#">View Instructions</a>
+          </div>
         </div>
       </div>
     </section>
